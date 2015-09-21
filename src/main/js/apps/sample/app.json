@@ -1,0 +1,838 @@
+{
+    "properties": {
+        "title": "${apptitle}"
+    },
+    "load": {
+        "bundleLocations": [
+            "localbundles",
+            "bundles"
+        ],
+        "allowedBundles": [
+            "console", "custominfo", "filesaver", "mobileview", "parametermanager", "qrcode", "remotechannels", "splashscreen", "system", "templatelayout", "toolset",
+            "basemapgallery", "followme", "map", "webmap",
+            "agsprinting", "bookmarks", "coordinatefinder", "legend", "locateme", "measurement", "navigationtoolset", "overviewmap", "redlining", "undoredo",
+            "reportstore", "reporttool", "agssearch", "geonames", "locator", "omnisearch",
+            "featureinfo", "infoservice", "resultcenter", "selection", "mobiletoc", "notifier", "routing",
+            "touch-active-toolwriter", "touch-themes-extension", "touch-tablet-template", "touch-i18n", "touch-logo", "touch-featureinfo-patch"
+        ],
+        "require": ["${app}.app"],
+        "i18n": ["bundle"],
+        "styles": ["${app}:app.css"]
+    },
+    "bundles": {
+        "agssearch": {
+            "AutoStoreRegistration": {
+                "componentEnabled": true
+            }
+        },
+        "basemapgallery": {
+            "Gallery": {
+                "showArcGisComMaps": true,
+                "showOwnMaps": false,
+                "defaultThumbnailServiceUrlPostfix": "/tile/11/676/11111",
+                "ignoredServices": []
+            }
+        },
+        "bookmarks": {
+            "BookmarksFactory": {
+                "storageName": "Mapapps_mapmarks",
+                "bookmarksOpts": {
+                    "editable": true
+                },
+                "predefinedBookmarks": [{
+                        "extent": {
+                            "spatialReference": {
+                                "wkid": 3857
+                            },
+                            "xmax": 1.0576968521053234E7,
+                            "xmin": -8208195.550306687,
+                            "ymax": 1.2931705115558533E7,
+                            "ymin": 2648784.574413076
+                        },
+                        "name": "${bookmarks.predefined.europe}"
+                    },
+                    {
+                        "extent": {
+                            "spatialReference": {
+                                "wkid": 3857
+                            },
+                            "xmax": 2357847.7436069767,
+                            "xmin": 9702.234686995856,
+                            "ymax": 7299468.689048652,
+                            "ymin": 6014103.621405475
+                        },
+                        "name": "${bookmarks.predefined.germany}"
+                    },
+                    {
+                        "extent": {
+                            "spatialReference": {
+                                "wkid": 3857
+                            },
+                            "xmax": 1564928.2306908383,
+                            "xmin": 1418169.1363834972,
+                            "ymax": 6932972.247678364,
+                            "ymin": 6852636.9309507515
+                        },
+                        "name": "Berlin"
+                    }]
+            },
+            "enabled": true
+        },
+        "contentviewer": {
+            "ContentViewer": {
+                "_defaultRules": [
+                    {
+                        "matches": {
+                            "context": {
+                                "mapModelNodeId": "highlighterPane"
+                            }
+                        },
+                        "skip": true
+                    },
+                    {
+                        "matches": {},
+                        "priority": -1,
+                        "type": "Grid",
+                        "onlyShowDetail": true,
+                        "detail": {
+                            "title": "${ui.content.defaultTitle}",
+                            "valueNotFoundString": "",
+                            "skipProperties": ["FID", "OBJECTID", "compositeId", "SHAPE_Leng", "Shape_Length", "SHAPE_Area", "Shape_Area", "geometry"],
+                            "dataViewOptions": {
+                                "showPager": false,
+                                "showFilter": false,
+                                "showViewButtons": false,
+                                "itemsPerPage": 100,
+                                "DGRID": {
+                                    "checkboxSelection": false
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "coordinatefinder": {
+            "CoordinateFinderController": {
+                "_symbolTable": {
+                    "point": {
+                        "url": "resource('images/mapCrosshair_winter.gif')",
+                        "width": 37.5,
+                        "height": 37.5,
+                        "xoffset": 0,
+                        "yoffset": 0,
+                        "type": "esriPMS"
+                    }
+                }
+            }
+        },
+        "coordinateviewer": {
+            "CoordinateViewer": {
+                "degreeFormat": true,
+                "transformSrs": true,
+                "targetSrs": "EPSG:4326"
+            }
+        },
+        "custominfo": {
+            "CustomInfoToggleTool": [{
+                    "widgetSettings": {
+                        "content": "${custominfo.imprint.content}",
+                        "window": {
+                            "marginBox": {
+                                "w": "100%",
+                                "h": "100%"
+                            },
+                            "windowClass": "top_slideInOut fullscreen",
+                            "draggable": false,
+                            "minimizeOnClose": true,
+                            "closable": true,
+                            "modal": false,
+                            "maximizable": false,
+                            "resizable": false,
+                            "title": "${custominfo.imprint.title}",
+                            "fixEdgesInViewPort": {
+                                "t": true,
+                                "r": true,
+                                "b": true,
+                                "l": true
+                            }
+                        }
+                    },
+                    "type": "IMPRINT",
+                    "toolClass": "ctCopyright",
+                    "title": "${custominfo.imprint.title}",
+                    "togglable": true,
+                    "id": "IMPRINT_Imprint_1385994559598_CustomInfoTool"
+                }]
+        },
+        "featureinfo": {
+            "FeatureInfoController": {
+                "clickTolerance": 15
+            }
+        },
+        "geonames": {
+            "POISearchStore": {
+                "componentEnabled": false
+            },
+            "PostalCodeSearchStore": {
+                "componentEnabled": true
+            }
+        },
+        "locateme": {
+            "LocateMe": {
+                "showPositionLogs": true
+            }
+        },
+        "mobiletoc": {
+            "MobileTocController": {
+                "entries": [
+                    {
+                        "id": "basemaps",
+                        "title": "${ui.basemaps}",
+                        "singleSelection": true,
+                        "mode": "showChildren",
+                        "nodes": ["__baselayer__"]
+                    }, {
+                        "id": "bathingService",
+                        "title": "${map.operational.bathingwater.title}",
+                        "singleSelection": false,
+                        "mode": "showNodes",
+                        "nodes": ["bathingwater"]
+                    }, {
+                        "id": "Natura2000Service",
+                        "title": "${map.operational.natura2000.title}",
+                        "singleSelection": false,
+                        "mode": "showNodes",
+                        "nodes": ["natura2000"]
+                    }, {
+                        "id": "Natura2000Layer",
+                        "singleSelection": false,
+                        "mode": "showChildren",
+                        "nodes": ["natura2000"]
+                    }, {
+                        "id": "bioGeoService",
+                        "title": "${map.operational.regions.title}",
+                        "singleSelection": false,
+                        "mode": "showNodes",
+                        "nodes": ["regions"]
+                    }, {
+                        "id": "bioGeoLayer",
+                        "singleSelection": false,
+                        "mode": "showChildren",
+                        "nodes": ["regions"]
+                    }
+                ]
+            }
+        },
+        "map": {
+            "MapModelFactory": {
+                "_configData": {
+                    "maps": [{
+                            "id": "default",
+                            "glass_pane": [],
+                            "operationalLayer": [
+                                {
+                                    "id": "bathingwater",
+                                    "title": "${map.operational.bathingwater.title}",
+                                    "enabled": false,
+                                    "service": "bathingwater",
+                                    "category": {
+                                        "title": "${map.operational.bathingwater.title}",
+                                        "description": "Map is showing bathing monitoring locations and associated attributive data from 2002 till 2012 in more detailed scales and aggregated data by countries. For the scales 1:5.000.001 and less detailed, data are aggregated by country. In such case, stacked bars show percentage of bathing water quality for coastal and inland waters together. Number of bathing waters within certain category is seen in pop up window which can be turned on with a click on single country. For the scale range 1:5 000.000 till1:700,001, individual bathing water sites (points) are visible instead of classified stacked charts and are coloured according the classification of bathing water quality. Symbol size depends on the map scale (in more detailed map scales symbols are bigger). For the scale 1:700,000 and more detailed, symbol of bather in a square appears instead of points. Symbol size depends on the map scale."
+                                    },
+                                    "layers": ["*"],
+                                    "opacity": 1
+                                },
+                                {
+                                    "id": "natura2000",
+                                    "title": "${map.operational.natura2000.title}",
+                                    "enabled": false,
+                                    "service": "natura000",
+                                    "category": {
+                                        "title": "${map.operational.natura2000.title}",
+                                        "description": "Natura 2000 is the key instrument to protect biodiversity in the European Union. It is an ecological network of protected areas, set up to ensure the survival of Europe's most valuable species and habitats. Natura 2000 is based on the 1979 Birds Directive and the 1992 Habitats Directive. The green infrastructure it provides safeguards numerous ecosystem services and ensures that Europe's natural systems remain healthy and resilient."
+                                    },
+                                    "layers": ["*"],
+                                    "opacity": 1
+                                },
+                                {
+                                    "id": "regions",
+                                    "title": "${map.operational.regions.title}",
+                                    "enabled": false,
+                                    "service": "regions",
+                                    "category": {
+                                        "title": "${map.operational.regions.title}",
+                                        "description": "The bio-geographic regions dataset contains the official delineations used in the Habitats Directive (92/43/EEC) and for the EMERALD Network set up under the Convention on the Conservation of European Wildlife and Natural Habitats (Bern Convention)"
+                                    },
+                                    "layers": ["*"],
+                                    "opacity": 0.5
+                                }],
+                            "baseLayer": [{
+                                    "title": "${map.base.aerial.title}",
+                                    "enabled": false,
+                                    "service": "worldimage",
+                                    "layers": ["*"]
+                                },
+                                {
+                                    "title": "${map.base.topo.title}",
+                                    "enabled": true,
+                                    "service": "worldtopo",
+                                    "layers": ["*"]
+                                },
+                                {
+                                    "title": "${map.base.streets.title}",
+                                    "enabled": false,
+                                    "service": "streets",
+                                    "layers": ["*"]
+                                }]
+                        }]
+                }
+            },
+            "MapState": {
+                "initialExtent": {
+                    "xmin": -896965.2750203621,
+                    "xmax": 3212289.3655896215,
+                    "ymin": 5170567.199262223,
+                    "ymax": 8086181.206171212,
+                    "wkid": 3857
+                }
+            },
+            "MappingResourceRegistryFactory": {
+                "_knownServices": {
+                    "services": [{
+                            "id": "worldimage",
+                            "url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+                            "type": "AGS_TILED",
+                            "title": "${map.base.aerial.title}",
+                            "description": "${map.base.aerial.description}"
+                        },
+                        {
+                            "id": "worldtopo",
+                            "url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer",
+                            "type": "AGS_TILED",
+                            "title": "${map.base.topo.title}",
+                            "description": "${map.base.topo.description}"
+                        },
+                        {
+                            "id": "streets",
+                            "description": "${map.base.streets.description}",
+                            "url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer",
+                            "type": "AGS_TILED",
+                            "title": "${map.base.streets.title}"
+                        },
+                        {
+                            "id": "bathingwater",
+                            "url": "http://water.discomap.eea.europa.eu/arcgis/rest/services/BathingWater/BathingWater_Dyna_WM/MapServer",
+                            "type": "AGS_DYNAMIC",
+                            "title": "BathingWater",
+                            "description": "Map is showing bathing monitoring locations and associated attributive data from 2002 till 2012 in more detailed scales and aggregated data by countries. For the scales 1:5.000.001 and less detailed, data are aggregated by country. In such case, stacked bars show percentage of bathing water quality for coastal and inland waters together. Number of bathing waters within certain category is seen in pop up window which can be turned on with a click on single country. For the scale range 1:5 000.000 till1:700,001, individual bathing water sites (points) are visible instead of classified stacked charts and are coloured according the classification of bathing water quality. Symbol size depends on the map scale (in more detailed map scales symbols are bigger). For the scale 1:700,000 and more detailed, symbol of bather in a square appears instead of points. Symbol size depends on the map scale.",
+                            "layers": [
+                                {
+                                    "id": "0",
+                                    "title": "Bathing water quality",
+                                    "maxScale": 30000001,
+                                    "enabled": true
+                                },
+                                {
+                                    "id": "1",
+                                    "title": "Bathing water quality",
+                                    "maxScale": 5000001,
+                                    "minScale": 30000000,
+                                    "enabled": true
+                                },
+                                {
+                                    "id": "2",
+                                    "title": "Bathing water quality",
+                                    "maxScale": 3000001,
+                                    "minScale": 5000000,
+                                    "enabled": true
+                                },
+                                {
+                                    "id": "3",
+                                    "title": "Bathing water quality",
+                                    "maxScale": 700001,
+                                    "minScale": 3000000,
+                                    "enabled": true
+                                },
+                                {
+                                    "id": "4",
+                                    "title": "Bathing water quality",
+                                    "maxScale": 500001,
+                                    "minScale": 700000,
+                                    "enabled": true
+                                },
+                                {
+                                    "id": "5",
+                                    "title": "Bathing water quality",
+                                    "maxScale": 200001,
+                                    "minScale": 500000,
+                                    "enabled": true
+                                },
+                                {
+                                    "id": "6",
+                                    "title": "Bathing water quality",
+                                    "minScale": 200000,
+                                    "enabled": true
+                                }
+                            ]
+                        },
+                        {
+                            "id": "regions",
+                            "url": "http://bio.discomap.eea.europa.eu/arcgis/rest/services/BioRegions/Biogeographicalregions_Dyna_WM/MapServer",
+                            "type": "AGS_DYNAMIC",
+                            "title": "Regions",
+                            "description": "The bio-geographic regions dataset contains the official delineations used in the Habitats Directive (92/43/EEC) and for the EMERALD Network set up under the Convention on the Conservation of European Wildlife and Natural Habitats (Bern Convention)",
+                            "layers": [
+                                {
+                                    "id": "0",
+                                    "title": "EU27 Biogeographical Regions 2011"
+                                },
+                                {
+                                    "id": "1",
+                                    "title": "EU27 Biogeographical Regions 2008"
+                                },
+                                {
+                                    "id": "2",
+                                    "title": "EU27 Biogeographical Regions 2005"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "natura000",
+                            "url": "http://discomap.eea.europa.eu/arcgis/rest/services/Bio/Natura2000_Dyna_WM/MapServer",
+                            "type": "AGS_DYNAMIC",
+                            "title": "Natura2000",
+                            "description": "Natura 2000 is the key instrument to protect biodiversity in the European Union. It is an ecological network of protected areas, set up to ensure the survival of Europe's most valuable species and habitats. Natura 2000 is based on the 1979 Birds Directive and the 1992 Habitats Directive. The green infrastructure it provides safeguards numerous ecosystem services and ensures that Europe's natural systems remain healthy and resilient.",
+                            "layers": [
+                                {
+                                    "id": "0",
+                                    "title": "Query Sites"
+                                },
+                                {
+                                    "id": "1",
+                                    "title": "Habitats Directive Sites (SCI)",
+                                    "queryable": false
+                                },
+                                {
+                                    "id": "2",
+                                    "title": "Scale under 1:10,000,000",
+                                    "parentId": "1",
+                                    "maxScale": 10000000
+                                },
+                                {
+                                    "id": "3",
+                                    "title": "Scale between 1:100.000 and 1:10,000,000",
+                                    "parentId": "1",
+                                    "maxScale": 300000,
+                                    "minScale": 9999999
+                                },
+                                {
+                                    "id": "4",
+                                    "title": "Scale above 1:100,000",
+                                    "parentId": "1",
+                                    "minScale": 299999
+                                },
+                                {
+                                    "id": "5",
+                                    "title": "Bird Directive Sites (SPA)",
+                                    "queryable": false
+                                },
+                                {
+                                    "id": "6",
+                                    "title": "Scale under 1:10,000,000",
+                                    "parentId": "5",
+                                    "maxScale": 10000000
+                                },
+                                {
+                                    "id": "7",
+                                    "title": "Scale between 1:100,000 and 1:10,000,000",
+                                    "parentId": "5",
+                                    "maxScale": 300000,
+                                    "minScale": 9999999
+                                },
+                                {
+                                    "id": "8",
+                                    "title": "Scale above 1:100,000",
+                                    "parentId": "5",
+                                    "minScale": 299999
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "MapWidgetFactory": {
+                "esriMapOpts": {
+                    "slider": false,
+                    "nav": false,
+                    "logo": true,
+                    "sliderStyle": "small",
+                    "doubleClickZoom": true,
+                    "clickRecenter": true,
+                    "pan": true,
+                    "rubberBandZoom": true,
+                    "keyboardNavigation": true,
+                    "scrollWheelZoom": true,
+                    "sliderPosition": "bottom-right",
+                    "displayGraphicsOnPan": true,
+                    "fadeOnZoom": true,
+                    "showAttribution": true,
+                    "sliderOrientation": "vertical",
+                    "sliderLabels": [""],
+                    "navigationMode": "css-transforms"
+                }
+            }
+        },
+        "touch-logo": {
+            "Logo": {
+                "src": "http://www.mapapps.de/static/conterra.png"
+            }
+        },
+        "omnisearch": {
+            "OmniSearchFactory": {
+                "comboBoxOpts": {
+                    "selectFirstResultOnEnter": false
+                }
+            },
+            "enabled": true
+        },
+        "overviewmap": {
+            "OverviewMap": {
+                "serviceDefinition": {
+                    "service": "worldtopo",
+                    "layers": ["*"]
+                }
+            }
+        },
+        "reporttool": {
+            "ReportTask": {
+                "mappings": []
+            },
+            "enabled": true
+        },
+        "resultcenter": {
+            "ActionController": {
+                "zoomToFeatures": true,
+                "zoomToSelected": true,
+                "centerSelected": true,
+                "zoomAfterDeletion": true
+            },
+            "DataView": {
+                "DGRID": {
+                    "checkboxSelection": true,
+                    "columns": [{
+                            "matches": {
+                                "identifier": true,
+                                "type": "number"
+                            },
+                            "title": "ID"
+                        }, {
+                            "matches": {
+                                "name": "NAME"
+                            },
+                            "title": "Title",
+                            "width": 32
+                        }, {
+                            "matches": {
+                                "name": {
+                                    "$in": ["AREA", "PERIMETER"]
+                                }
+                            },
+                            "skip": true
+                        }, {
+                            "matches": {
+                                "name": {
+                                    "$exists": true
+                                }
+                            }
+                        }]
+                },
+                "ICON": {
+                    "iconFields": ["adapter"]
+                }
+            },
+            "FeatureMapVisualizer": {
+                "useDataViewPaging": false
+            },
+            "GraphicResolverFactory": {
+                "symbolLookup": {
+                    "lookupAttributeName": "type",
+                    "lookupTable": {
+                        "IMAGE": {
+                            "type": "esriPMS",
+                            "url": "images/seasons/marker_image.png",
+                            "contentType": "image/png",
+                            "width": 33.3333,
+                            "height": 31.333,
+                            "angle": 0,
+                            "xoffset": 0,
+                            "yoffset": 0
+                        },
+                        "IMAGE-selected": {
+                            "type": "esriPMS",
+                            "url": "images/seasons/marker_image_selected.png",
+                            "contentType": "image/png",
+                            "width": 33.3333,
+                            "height": 31.333,
+                            "angle": 0,
+                            "xoffset": 0,
+                            "yoffset": 0
+                        },
+                        "IMAGE-selected-highlighted": {
+                            "type": "esriPMS",
+                            "url": "images/seasons/marker_image_selected.png",
+                            "contentType": "image/png",
+                            "width": 42.5532,
+                            "height": 40,
+                            "angle": 0,
+                            "xoffset": 0,
+                            "yoffset": 0
+                        },
+                        "IMAGE-highlighted": {
+                            "type": "esriPMS",
+                            "url": "images/seasons/marker_image.png",
+                            "contentType": "image/png",
+                            "width": 42.5532,
+                            "height": 40,
+                            "angle": 0,
+                            "xoffset": 0,
+                            "yoffset": 0
+                        },
+                        "DOCUMENT": {
+                            "type": "esriPMS",
+                            "url": "images/seasons/marker_wikipedia.png",
+                            "contentType": "image/png",
+                            "width": 33.3333,
+                            "height": 31.333,
+                            "angle": 0,
+                            "xoffset": 0,
+                            "yoffset": 0
+                        },
+                        "DOCUMENT-selected": {
+                            "type": "esriPMS",
+                            "url": "images/seasons/marker_wikipedia_selected.png",
+                            "contentType": "image/png",
+                            "width": 33.3333,
+                            "height": 31.333,
+                            "angle": 0,
+                            "xoffset": 0,
+                            "yoffset": 0
+                        },
+                        "DOCUMENT-highlighted": {
+                            "type": "esriPMS",
+                            "url": "images/seasons/marker_wikipedia.png",
+                            "contentType": "image/png",
+                            "width": 42.5532,
+                            "height": 40,
+                            "angle": 0,
+                            "xoffset": 0,
+                            "yoffset": 0
+                        },
+                        "DOCUMENT-selected-highlighted": {
+                            "type": "esriPMS",
+                            "url": "images/seasons/marker_wikipedia_selected.png",
+                            "contentType": "image/png",
+                            "width": 42.5532,
+                            "height": 40,
+                            "angle": 0,
+                            "xoffset": 0,
+                            "yoffset": 0
+                        }
+                    }
+                }
+            },
+            "TriggerShowResultCenterCommand": {
+                "showToolOnData": true,
+                "autoOpen": true,
+                "hideToolOnEmpty": false,
+                "autoClose": true
+            },
+            "ResultCenterToggleTool": {
+                "toolRole": "toolset"
+            }
+        },
+        "selection": {
+            "SelectionAction": {
+                "autoDeactivateTool": true
+            },
+            "StoreListDataViewController": {
+                "deactivateOnSelectionEnd": true
+            },
+            "StoreListDataView": {
+                "showFilter": true,
+                "filterDuringKeyUp": true,
+                "showPager": false,
+                "itemsPerPage": 10000,
+                "DGRID": {
+                    "checkboxSelection": false,
+                    "selectionMode": "single",
+                    "columns": [
+                        {
+                            "matches": {
+                                "name": "title"
+                            },
+                            "title": "Title",
+                            "width": 32,
+                            "type": "string"
+                        },
+                        {
+                            "matches": {
+                                "name": "description"
+                            },
+                            "skip": true
+                        }
+                    ]
+                }
+            }
+        },
+        "templates": {
+            "TemplateModel": {
+                "_selectedTemplate": "seasons_tablet",
+                "_templates": [
+                    {
+                        "name": "seasons_tablet",
+                        "location": "touch-tablet-template"
+                    }
+                ]
+            }
+        },
+        "themes": {
+            "ThemeModel": {
+                "_selectedTheme": "everlasting",
+                "_themes": [
+                    {
+                        "name": "everlasting"
+                    }
+                ]
+            }
+        },
+        "toolrules": {
+            "ToolRuleManager": {
+                "_rules": {
+                    "reportTool": {
+                        "themes": ["bathingwater"],
+                        "ruleSuccessProperty": "visibility"
+                    }
+                }
+            },
+            "enabled": true
+        },
+        "redlining": {
+            "StylePropertiesTool": {
+                "rules": {
+                    "noGroup": true,
+                    "redliningToolActive": true,
+                    "ruleSuccessProperty": "visibility"
+                }
+            }
+        },
+        "templatelayout": {
+            "MANIFEST": {
+                "Bundle-StartLevel": 100
+            }
+        },
+        "toolset": {
+            "ToolsetManager": {
+                "toolsets": [{
+                        "id": "drawer_left",
+                        "title": "Drawer (left)",
+                        "tools": [
+                            "initialExtentTool",
+                            "routingToggleTool",
+                            "agsprinttool",
+                            "printtool",
+                            "urlEncoder",
+                            "measurementtool",
+                            "redlining_tools",
+                            "storeListDialogToggleTool",
+                            "navigation_tools",
+                            "coordinateFinderTool",
+                            "appsOverviewToggleTool",
+                            "basemapgalleryToggleTool",
+                            "bookmarkstool"
+                        ],
+                        "container": "map",
+                        "backgroundOpacity": 0.7,
+                        "drawerSize": 350,
+                        "windowType": "drawer_left",
+                        "registerTool": true
+                    }, {
+                        "id": "search_tools",
+                        "title": "${toolsets.searchTools}",
+                        "tools": [
+                            "drawer_left",
+                            "locateme"
+                        ],
+                        "max_horizontal": 1,
+                        "windowType": "container",
+                        "registerWidget": true,
+                        "container": "ignore",
+                        "cssClass": "notitle muted mapview_tools",
+                        "deactivateToolsOnHide": true
+                    }, {
+                        "id": "actionbar_right",
+                        "tools": [
+                            "editUITool",
+                            "stylePropertiesTool",
+                            "resultcenterToggleTool",
+                            "overviewmap",
+                            "mobileTocToggleTool",
+                            "legendToggleTool",
+                            "followmeToggleTool",
+                            "*CustomInfoTool"],
+                        "max_horizontal": 1,
+                        "windowType": "container",
+                        "registerWidget": true,
+                        "container": "ignore",
+                        "deactivateToolsOnHide": true
+                    }, {
+                        "id": "redlining_tools",
+                        "title": "${toolsets.redliningTools}",
+                        "tools": [
+                            "drawpointtool",
+                            "drawlinetool",
+                            "drawpolylinetool",
+                            "drawfreehandpolylinetool",
+                            "drawpolygontool",
+                            "drawfreehandpolygontool",
+                            "drawellipsetool",
+                            "drawarrowtool",
+                            "drawTextTool",
+                            "drawSymbolTool",
+                            "*EditTool",
+                            "redliningSymbolPropertiesTool",
+                            "undoTool",
+                            "redoTool",
+                            "drawerasealltool"],
+                        "iconClass": "icon-pencil",
+                        "deactivateToolsOnHide": true,
+                        "container": "ignore",
+                        "registerTool": true,
+                        "windowType": "menuitem"
+                    }, {
+                        "id": "navigation_tools",
+                        "title": "${toolsets.navigationTools}",
+                        "tools": [
+                            "zoomInTool",
+                            "zoomOutTool",
+                            "panTool",
+                            "zoomToNextExtentTool",
+                            "zoomToPrevExtentTool",
+                            "zoomToFullExtentTool"
+                        ],
+                        "container": "map",
+                        "container": "ignore",
+                        "registerTool": true,
+                        "iconClass": "icon-zoom-world",
+                        "windowType": "menuitem",
+                        "deactivateToolsOnHide": true
+                    }]
+            }
+        },
+        "toolset-config": {
+            "ToolsetBuilderWidgetFactory": {
+                "componentEnabled": false
+            }
+        }
+    }
+}

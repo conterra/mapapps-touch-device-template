@@ -1,0 +1,106 @@
+/**
+ * Copyright (C) 2015 con terra GmbH (info@conterra.de)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *         http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* 
+    Created on : 10.06.2015, 15:04:00
+    Author     : juku
+*/
+.ctAppRoot .searchbox,
+.ctAppRoot .branding{
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);  
+    border-radius: 2px;
+}
+.ctAppRoot .searchbox .omnisearch:not(:empty),
+.ctAppRoot .searchbox .searchActionBar:not(:empty){
+    border-bottom: 1px solid #CCC;
+}
+.ctAppRoot .searchbox .ctTool_locateme.ctTool .dijitButtonNode{
+    padding: 10px;
+}
+.ctAppRoot .searchbox .ctTool_locateme.ctTool .dijitButtonNode .dijitIcon{
+    font-size: 1em;
+    vertical-align: top;
+    position: relative;
+    top: 1px;
+    width: auto;
+    height: auto;
+}
+.ctAppRoot .searchbox .ctOmniSearchInput{
+    width: auto;
+}
+.ctAppRoot .searchbox .ctOmniSearchUI.ctMobile .ctOmniSearchInput > div:first-child{
+    padding-left: 10px;
+}
+.ctAppRoot .searchbox div.ctOmniSearchUI.ctMobile{
+    box-shadow: none;
+    border: none;
+    font-size: 22px;
+}
+.ctAppRoot .searchbox .ctOmniSearchMagnify{
+    display: none;
+}
+.ctAppRoot .searchbox .ctOmniSearchUI.ctMobile .ctOmniSearchReset ,
+.ctAppRoot .searchbox .ctOmniSearchUI.ctMobile .ctOmniSearchLoading{
+    top: 9px;
+    width: auto;
+    height: auto;
+}
+.ctAppRoot .searchbox .ctDrawerButton .dijitButtonNode,
+.ctAppRoot .searchbox .ctOmniSearchUI.ctMobile .ctOmniSearchReset ,
+.ctAppRoot .searchbox .ctOmniSearchUI.ctMobile .ctOmniSearchLoading,
+.ctAppRoot .searchbox .ctOmniSearchUI .ctOmniSearchSettings .dijitIcon{
+    font-size: 22px;
+}
+
+.ctAppRoot .searchbox .ctOmniSearchUI .ctOmniSearchSettings{
+    padding-right: 10px;
+}
+
+.ctAppRoot .searchbox .ctOmniSearchUI .ctOmniSearchSettings .dijitIcon{
+    vertical-align: top;
+    width: auto;
+    height: auto;
+}
+.searchbox .dijitButton .dijitButtonNode,
+.searchbox .dijitToggleButton .dijitButtonNode,
+.searchbox .ctOmniSearchSettings.ctSettingsVisible .dijitButtonNode, 
+.searchbox .ctOmniSearchSettings.dijitButtonHover .dijitButtonNode{
+    background: transparent none;
+}
+.searchbox .dijitButton .dijitButtonNode,
+.searchbox .dijitToggleButton .dijitButtonNode,
+.searchbox .dijitButton.ctOmniSearchSettings .dijitButtonNode{
+    color: #BDC3C7;
+}
+
+
+
+
+.ctAppRoot .mblComboBoxMenu.ctOmniSearchDropDown .mblComboBoxMenuItem{
+    padding: .5em .4em;
+    font-size: inherit;
+    border-width: 0 0 1px;
+    border-color: #EFEFEF;
+}
+.ctAppRoot .mblComboBoxMenu.ctOmniSearchDropDown .mblComboBoxMenuItem:last-child{
+    border-width: 0;
+}
+.ctAppRoot .mblComboBoxMenu.ctOmniSearchDropDown {
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2); 
+    border-color: #efefef;
+    background: #fff;
+    margin-top: 7px;
+}

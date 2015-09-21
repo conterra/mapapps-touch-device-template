@@ -1,0 +1,287 @@
+{
+    "load": {
+        "bundleLocations": [
+            "localbundles",
+            "bundles"
+        ],
+        "allowedBundles": [
+            "mobileview", "system", "templatelayout", "toolset", "map", "notifier", "contentviewer",
+            "touch-active-toolwriter", "touch-themes-extension", "touch-tablet-template", "touch-i18n", "touch-logo", "touch-featureinfo-patch"
+        ],
+        "require": ["${app}.app"],
+        "i18n": ["bundle"],
+        "styles": ["${app}:app.css"]
+    },
+    "bundles": {
+        "contentviewer": {
+            "ContentViewer": {
+                "_defaultRules": [
+                    {
+                        "matches": {
+                            "context": {
+                                "mapModelNodeId": "highlighterPane"
+                            }
+                        },
+                        "skip": true
+                    },
+                    {
+                        "matches": {},
+                        "priority": -1,
+                        "type": "Grid",
+                        "onlyShowDetail": true,
+                        "detail": {
+                            "title": "${ui.content.defaultTitle}",
+                            "valueNotFoundString": "",
+                            "skipProperties": ["FID", "OBJECTID", "compositeId", "SHAPE_Leng", "Shape_Length", "SHAPE_Area", "Shape_Area", "geometry"],
+                            "dataViewOptions": {
+                                "showPager": false,
+                                "showFilter": false,
+                                "showViewButtons": false,
+                                "itemsPerPage": 100,
+                                "DGRID": {
+                                    "checkboxSelection": false
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "editing": {
+            "EditUITool": {
+                "rules": {
+                    "noGroup": true,
+                    "or": [{
+                            "editingCreateToolActive": true
+                        }, {
+                            "editingEditToolActive": true
+                        }],
+                    "ruleSuccessProperty": "visibility"
+                }
+            }
+        },
+        "featureinfo": {
+            "FeatureInfoController": {
+                "clickTolerance": 15
+            }
+        },
+        "map": {
+            "MapModelFactory": {
+                "_configData": {
+                    "maps": [{
+                            "id": "default",
+                            "glass_pane": [],
+                            "operationalLayer": [],
+                            "baseLayer": [{
+                                    "title": "${map.base.streets.title}",
+                                    "enabled": true,
+                                    "service": "streets",
+                                    "layers": ["*"]
+                                }]
+                        }]
+                }
+            },
+            "MapState": {
+                "initialExtent": {
+                    "xmin": -896965.2750203621,
+                    "xmax": 3212289.3655896215,
+                    "ymin": 5170567.199262223,
+                    "ymax": 8086181.206171212,
+                    "wkid": 3857
+                }
+            },
+            "MappingResourceRegistryFactory": {
+                "_knownServices": {
+                    "services": [{
+                            "id": "streets",
+                            "description": "${map.base.streets.description}",
+                            "url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer",
+                            "type": "AGS_TILED",
+                            "title": "${map.base.streets.title}"
+                        }]
+                }
+            },
+            "MapWidgetFactory": {
+                "esriMapOpts": {
+                    "slider": false,
+                    "nav": false,
+                    "logo": true,
+                    "sliderStyle": "small",
+                    "doubleClickZoom": true,
+                    "clickRecenter": true,
+                    "pan": true,
+                    "rubberBandZoom": true,
+                    "keyboardNavigation": true,
+                    "scrollWheelZoom": true,
+                    "sliderPosition": "bottom-right",
+                    "displayGraphicsOnPan": true,
+                    "fadeOnZoom": true,
+                    "showAttribution": true,
+                    "sliderOrientation": "vertical",
+                    "sliderLabels": [""],
+                    "navigationMode": "css-transforms"
+                }
+            }
+        },
+        "redlining": {
+            "StylePropertiesTool": {
+                "rules": {
+                    "noGroup": true,
+                    "redliningToolActive": true,
+                    "ruleSuccessProperty": "visibility"
+                }
+            }
+        },
+        "templates": {
+            "TemplateModel": {
+                "_selectedTemplate": "seasons_tablet",
+                "_templates": [
+                    {
+                        "name": "seasons_tablet",
+                        "location": "touch-tablet-template"
+                    }
+                ]
+            }
+        },
+        "themes": {
+            "ThemeModel": {
+                "_selectedTheme": "everlasting",
+                "_themes": [
+                    {
+                        "name": "everlasting"
+                    }
+                ]
+            }
+        },
+        "templatelayout": {
+            "MANIFEST": {
+                "Bundle-StartLevel": 100
+            }
+        },
+        "toolset": {
+            "ToolsetManager": {
+                "toolsets": [{
+                        "id": "drawer_left",
+                        "tools": [
+                            "initialExtentTool",
+                            "routingToggleTool",
+                            "agsprinttool",
+                            "printtool",
+                            "urlEncoder",
+                            "measurementtool",
+                            "redlining_tools",
+                            "editing_tools",
+                            "storeListDialogToggleTool",
+                            "navigation_tools",
+                            "coordinateFinderTool",
+                            "appsOverviewToggleTool",
+                            "basemapgalleryToggleTool",
+                            "bookmarkstool"
+                        ],
+                        "container": "map",
+                        "backgroundOpacity": 0.7,
+                        "drawerSize": 350,
+                        "windowType": "drawer_left",
+                        "registerTool": true
+                    }, {
+                        "id": "search_tools",
+                        "title": "${toolsets.searchTools}",
+                        "tools": [
+                            "drawer_left",
+                            "locateme"
+                        ],
+                        "max_horizontal": 1,
+                        "windowType": "container",
+                        "registerWidget": true,
+                        "container": "ignore",
+                        "cssClass": "notitle muted mapview_tools",
+                        "deactivateToolsOnHide": true
+                    }, {
+                        "id": "actionbar_right",
+                        "tools": [
+                            "editUITool",
+                            "stylePropertiesTool",
+                            "resultcenterToggleTool",
+                            "overviewmap",
+                            "mobileTocToggleTool",
+                            "legendToggleTool",
+                            "followmeToggleTool",
+                            "*CustomInfoTool"],
+                        "max_horizontal": 1,
+                        "windowType": "container",
+                        "registerWidget": true,
+                        "container": "ignore",
+                        "deactivateToolsOnHide": true
+                    }, {
+                        "id": "redlining_tools",
+                        "title": "${toolsets.redliningTools}",
+                        "tools": [
+                            "drawpointtool",
+                            "drawlinetool",
+                            "drawpolylinetool",
+                            "drawfreehandpolylinetool",
+                            "drawpolygontool",
+                            "drawfreehandpolygontool",
+                            "drawellipsetool",
+                            "drawarrowtool",
+                            "drawTextTool",
+                            "drawSymbolTool",
+                            "*EditTool",
+                            "redliningSymbolPropertiesTool",
+                            "undoTool",
+                            "redoTool",
+                            "drawerasealltool"],
+                        "iconClass": "icon-pencil",
+                        "deactivateToolsOnHide": true,
+                        "container": "ignore",
+                        "registerTool": true,
+                        "windowType": "menuitem"
+                    }, {
+                        "id": "editing_tools",
+                        "title": "${toolsets.editingTools}",
+                        "tools": [
+                            "editDefaultCreateFeatureTool",
+                            "editFeatureTool",
+                            "editDeleteFeatureTool"],
+                        "iconClass": "icon-feature-edit",
+                        "deactivateToolsOnHide": true,
+                        "container": "ignore",
+                        "registerTool": true,
+                        "windowType": "menuitem"
+                    }, {
+                        "id": "navigation_tools",
+                        "title": "${toolsets.navigationTools}",
+                        "tools": [
+                            "zoomInTool",
+                            "zoomOutTool",
+                            "panTool",
+                            "zoomToNextExtentTool",
+                            "zoomToPrevExtentTool",
+                            "zoomToFullExtentTool"
+                        ],
+                        "container": "map",
+                        "container": "ignore",
+                        "registerTool": true,
+                        "iconClass": "icon-zoom-world",
+                        "windowType": "menuitem",
+                        "deactivateToolsOnHide": true
+                    }]
+            }
+        },
+        "toolset-config": {
+            "ToolsetBuilderWidgetFactory": {
+                "componentEnabled": false
+            }
+        },
+        "themes-config": {
+            "BuilderWidget": {
+                "componentEnabled": false
+            }
+        },
+        "templates-config": {
+            "BuilderWidget": {
+                "componentEnabled": false
+            }
+        }
+    }
+}

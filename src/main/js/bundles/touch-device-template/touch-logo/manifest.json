@@ -1,0 +1,23 @@
+{
+    "Bundle-SymbolicName": "touch-logo",
+    "Bundle-Name": "${bundleName}",
+    "Bundle-Description": "${bundleDescription}",
+    "Bundle-Version": "1.0.0",
+    "Bundle-Vendor": "con terra GmbH",
+    "Config-Bundle-Location": "/config",
+    "CSS-Themes-Extension": [{
+            "name": "*",
+            "files": ["./styles/bundle.css"]
+        }],
+    "Product-Name": "map.apps Developer Network",
+    "Components": [{
+            "name": "Logo",
+            "provides": ["dijit.Widget"],
+            "propertiesConstructor": true,
+            "properties": {
+                "widgetRole": "logo",
+                "src": null,
+                "msg": "<i>${placeholder}</i>"
+            }
+        }]
+}

@@ -1,0 +1,35 @@
+{
+    "Bundle-SymbolicName": "touch-themes-extension",
+    "Bundle-Name": "map.apps mobile: Mobile Theme Extension Bundle",
+    "Bundle-Description": "Bundle provides additional styling to improve usability on touch devices",
+    "Bundle-Version": "1.0.0",
+    "Bundle-Layer": "",
+    "Bundle-Main": "",
+    "Bundle-Localization": [],
+    "Bundle-Vendor": "con terra GmbH",
+    "Bundle-Category": ["mobile", "themes"],
+    "Require-Bundle": [{
+            "name": "themes",
+            "version": "~3.2.0"
+        }],
+    "CSS-Themes-Extension": [{
+            "name": "everlasting",
+            "files": ["./styles/style.css"]
+        }, {
+            "name": "winter",
+            "files": ["./styles/style.css"]
+        },
+        {
+            "name": "spring",
+            "files": ["./styles/style.css"]
+        },
+        {
+            "name": "summer",
+            "files": ["./styles/style.css"]
+        },
+        {
+            "name": "autumn",
+            "files": ["./styles/style.css"]
+        }],
+    "Product-Name": "map.apps Developer Network"
+}

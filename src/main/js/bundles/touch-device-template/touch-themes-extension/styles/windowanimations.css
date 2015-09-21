@@ -1,0 +1,131 @@
+/**
+ * Copyright (C) 2015 con terra GmbH (info@conterra.de)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *         http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* 
+    Created on : 11.06.2015, 10:45:52
+    Author     : juku
+*/
+
+/*disable default 'woosh animation'*/
+.ctWindow.right_slideInOut,
+.ctWindow.bottom_slideInOut{ 
+    -webkit-animation: none;
+    -moz-animation: none;
+    -o-animation: none;
+    -ms-animation: none;
+    animation:  none;
+}
+
+.ctWindow.right_slideInOut.fadingIn{
+    -webkit-animation: right_slideIn .3s ease-in-out;
+    -moz-animation: right_slideIn .3s ease-in-out;
+    animation: right_slideIn .3s ease-in-out;
+}
+.ctWindow.right_slideInOut.fadingOut{
+    -webkit-animation: right_slideOut .3s ease-in-out;
+    -moz-animation: right_slideOut .3s ease-in-out;
+    animation: right_slideOut .3s ease-in-out;
+}
+
+.ctWindow.bottom_slideInOut.fadingIn{
+    -webkit-animation: bottom_slideIn .3s ease-in-out;
+    -moz-animation: bottom_slideIn .3s ease-in-out;
+    animation: bottom_slideIn .3s ease-in-out;
+}
+.ctWindow.bottom_slideInOut.fadingOut{
+    -webkit-animation: bottom_slideOut .3s ease-in-out;
+    -moz-animation: bottom_slideOut .3s ease-in-out;
+    animation: bottom_slideOut .3s ease-in-out;
+}
+
+.ctWindow.top_slideInOut.fadingIn{
+    -webkit-animation: top_slideIn .3s ease-in-out;
+    -moz-animation: top_slideIn .3s ease-in-out;
+    animation: top_slideIn .3s ease-in-out;
+}
+.ctWindow.top_slideInOut.fadingOut{
+    -webkit-animation: top_slideOut .3s ease-in-out;
+    -moz-animation: top_slideOut .3s ease-in-out;
+    animation: top_slideOut .3s ease-in-out;
+}
+
+@-webkit-keyframes right_slideIn {
+    0% {-webkit-transform: translate(100%, 0);}
+    100%{-webkit-transform: translate(0, 0);}
+}
+@-webkit-keyframes right_slideOut {
+    0%{-webkit-transform: translate(0, 0);}
+    100% {-webkit-transform: translate(100%, 0);}
+}
+@-webkit-keyframes bottom_slideIn {
+    0% {-webkit-transform: translate(0, 30%);}
+    100%{-webkit-transform: translate(0, 0);}
+}
+@-webkit-keyframes bottom_slideOut {
+    0%{-webkit-transform: translate(0, 0);}
+    100% {-webkit-transform: translate(0, 100%);}
+}
+@-webkit-keyframes top_slideIn {
+    0% {-webkit-transform: translate(0, -100%);}
+    100%{-webkit-transform: translate(0, 0);}
+}
+@-webkit-keyframes top_slideOut {
+    0%{-webkit-transform: translate(0, 0);}
+    100% {-webkit-transform: translate(0, -100%);}
+}
+@-webkit-keyframes right_slideIn {
+    0% {-webkit-transform: translate(100%, 0);}
+    100%{-webkit-transform: translate(0, 0);}
+}
+@-moz-keyframes right_slideOut {
+    0%{-moz-transform: translate(0, 0);}
+    100% {-moz-transform: translate(100%, 0);}
+}
+@-moz-keyframes bottom_slideIn {
+    0% {-moz-transform: translate(0, 30%);}
+    100%{-moz-transform: translate(0, 0);}
+}
+@-moz-keyframes bottom_slideOut {
+    0%{-moz-transform: translate(0, 0);}
+    100% {-moz-transform: translate(0, 100%);}
+}
+@-moz-keyframes top_slideIn {
+    0% {-moz-transform: translate(0, -100%);}
+    100%{-moz-transform: translate(0, 0);}
+}
+@-moz-keyframes top_slideOut {
+    0%{-moz-transform: translate(0, 0);}
+    100% {-moz-transform: translate(0, -100%);}
+}
+@keyframes right_slideOut {
+    0%{-moz-transform: translate(0, 0);}
+    100% {-moz-transform: translate(100%, 0);}
+}
+@keyframes bottom_slideIn {
+    0% {-moz-transform: translate(0, 30%);}
+    100%{-moz-transform: translate(0, 0);}
+}
+@keyframes bottom_slideOut {
+    0%{-moz-transform: translate(0, 0);}
+    100% {-moz-transform: translate(0, 100%);}
+}
+@keyframes top_slideIn {
+    0% {-moz-transform: translate(0, -100%);}
+    100%{-moz-transform: translate(0, 0);}
+}
+@keyframes top_slideOut {
+    0%{-moz-transform: translate(0, 0);}
+    100% {-moz-transform: translate(0, -100%);}
+}

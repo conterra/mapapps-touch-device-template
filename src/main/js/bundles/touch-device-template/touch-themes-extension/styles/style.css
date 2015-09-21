@@ -1,0 +1,104 @@
+/**
+ * Copyright (C) 2015 con terra GmbH (info@conterra.de)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *         http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* 
+    Created on : 09.06.2015, 16:00:46
+    Author     : juku
+*/
+
+/*
+    Contains additional styles for seasons-theme series to improve usability on touch device with increased font-sizes and margins between clickable elements.
+*/
+/*
+    remove absolute font size definitions from the following components:
+    -- shrinkingDropDown
+    -- basemapToggler
+    -- builderWizardBtn 
+    -- ctTools
+    -- WindowDockingBar 
+    -- WindowBase
+    -- PopUpWindow 
+    -- PopUpMenus
+*/
+
+@import url("active-toolwriter.css");
+@import url("fontsizes.css");
+@import url("searchbox.css");
+@import url("sidebar.css");
+@import url("windowanimations.css");
+
+.ctAppRoot .ctWindow .ctWindowToolbar .ctWindowTool .dijitButtonNode{
+    padding: 4px;
+}
+.ctAppRoot .ctWindow .ctWindowToolbar .ctWindowTool .dijitIcon{
+    font-size: 25px;
+}
+.ctAppRoot .ctWindow[class*='slideInOut'] .ctWindowToolbar .ctWindowTool .dijitIcon.ctToolIcon_windowClose{
+    border: 2px solid #FFF;
+    border-radius: 100%;
+}
+.ctAppRoot .ctWindow.right_slideInOut .ctWindowToolbar .ctWindowTool .dijitIcon.ctToolIcon_windowClose:before{
+    content:'\e006';
+}
+.ctAppRoot .ctWindow.top_slideInOut .ctWindowToolbar .ctWindowTool .dijitIcon.ctToolIcon_windowClose:before{
+    content:'\e005';
+}
+
+.ctAppRoot .ctWindow.fullscreen .dijitDialogPaneContent{
+    /*tripple the amount of padding for fullscreen windows*/
+    padding: 24px;
+}
+.ctAppRoot .ctWindow.fullscreen .dijitDialogTitleBar{
+    padding-left: 24px;
+}
+
+.ctDrawer .dijitMenuItem td.dijitMenuArrowCell{
+    padding-left: 5px;
+}
+.ctDrawer .dijitMenuItem .dijitMenuExpand{
+    top: -10px;
+    left: -10px;
+}
+.ctAppRoot .dijitMenuPopup{
+    overflow-y: hidden
+}
+
+.ctAppRoot .ctOmniSearchSettings .dijitTooltipContainer{
+    border-color: #BDC3C7;
+}
+.ctAppRoot .ctOmniSearchSettings .dijitTooltipConnector{
+    border-left: 1px solid #BDC3C7;
+    border-right: 1px solid #BDC3C7;
+    left: 0;
+}
+
+.ctAppRoot .ctCoordinateViewer{
+    text-shadow: 1px 1px 1px #FFF;
+    color: #616161!important;
+}
+.ctAppRoot .esriScalebarLine{
+    box-shadow: 2px 2px 3px rgba(255, 255, 255, 0.7);
+}
+
+/*change font-color to theme main color*/
+/*TODO: Must be changed to themes main color or a color contrasting to background color*/
+.ctAppRoot .searchbox .dijitButton.dijitHover .dijitButtonNode,
+.ctAppRoot .searchbox .dijitToggleButton.dijitHover .dijitButtonNode,
+.ctAppRoot .searchbox .dijitToggleButton.dijitChecked .dijitButtonNode,
+.ctAppRoot .searchbox .dijitButton.ctOmniSearchSettings.ctSettingsVisible .dijitIcon,
+.ctAppRoot .actionBarRight .ctTool.dijitHover .dijitButtonNode,
+.ctAppRoot .actionBarRight .ctTool.dijitChecked .dijitButtonNode{
+    color: #12a5f4; 
+}

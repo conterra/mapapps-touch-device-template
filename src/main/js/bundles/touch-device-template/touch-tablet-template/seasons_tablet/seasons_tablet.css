@@ -1,0 +1,208 @@
+/**
+ * Copyright (C) 2015 con terra GmbH (info@conterra.de)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *         http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/*
+    Created on : 09.06.2015, 17:32:51
+    Author     : juku
+*/
+
+/*-------------------------1
+    Header  Classes
+-------------------------*/
+.fullwidthAndHeight {
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+}
+.ctTpl_seasons_tablet .sidebar{
+    width: 60px;
+    text-align: center;
+} 
+.ctTpl_seasons_tablet .sidebar .actionBarRight{
+    position: absolute;
+    bottom: 0;
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+} 
+/*-------------------------
+    Map Classes
+-------------------------*/
+
+.ctTpl_seasons_tablet .mainMap > .dijitContentPane {
+    /* make map fullsize */
+    padding: 0;
+}
+.ctTpl_seasons_tablet .mainMap{
+    /*ensure that windows are kept inside map*/
+    overflow: hidden;
+}
+
+.ctTpl_seasons_tablet .top_left_container{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.ctTpl_seasons_tablet .mobile_toolwriter{
+    width: 90%;
+    margin: 0 auto;
+}
+.ctTpl_seasons_tablet .searchbox > .omnisearch{
+    vertical-align: middle;
+}
+.ctTpl_seasons_tablet .searchbox .omnisearch,
+.ctTpl_seasons_tablet .searchbox .searchActionBar{
+    display: table-cell
+}
+
+.ctTpl_seasons_tablet .ctOmniSearchSettings.dijitTooltipBelow{
+    margin-top: 10px;
+    margin-left: -5px;
+}
+.ctTpl_seasons_tablet .branding{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.ctTpl_seasons_tablet .esriControlsBR {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    z-index: 1;
+}
+.ctTpl_seasons_tablet .esriAttribution{
+    font-size: 10px;
+    text-align: left;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+}
+.ctTpl_seasons_tablet .logo-med,
+.ctTpl_seasons_tablet .logo-sm{
+    bottom: 5px;
+    right: 20px;
+    position: absolute;
+}
+.ctTpl_seasons_tablet .logo-sm{
+    width: 42px;
+}
+.ctTpl_seasons_tablet .map .dijitMenu{
+    /*ensure, that esri logo does not block any tool menues*/
+    z-index: 2
+}
+/*-------------------------
+    Zoom Slider Classes
+    Zoom Slider position is selected via esriMapOpts in app.json
+-------------------------*/
+.ctTpl_seasons_tablet .esriLargeSliderTR,
+.ctTpl_seasons_tablet .esriSimpleSliderTR {
+    top: 70px;
+    right: 25px;
+}
+.ctTpl_seasons_tablet .esriLargeSliderTL,
+.ctTpl_seasons_tablet .esriSimpleSliderTL {
+    top: 70px;
+    left: 25px;
+}
+
+.ctTpl_seasons_tablet .esriSimpleSliderBR {
+    bottom: 155px;
+    right: 25px;
+}
+
+.ctTpl_seasons_tablet .esriLargeSliderBR {
+    bottom: 155px;
+    right: 10px;
+}
+
+.ctTpl_seasons_tablet .esriLargeSliderBL,
+.ctTpl_seasons_tablet .esriSimpleSliderBL{
+    bottom: 110px;
+    left: 25px;
+}
+
+.ctTpl_seasons_tablet .dijitMenuPopup .ctShrinkingDropDownMenu{
+    position: relative;
+    top: -1px !important;
+}
+
+/*-------------------------
+    Basemapgallery
+-------------------------*/
+.ctTpl_seasons_tablet .esriBasemapGallery{
+    height: 100%;
+    overflow: auto;
+}
+.ctTpl_seasons_tablet .esriBasemapGallery .basemapTable{
+    text-align: center;
+}
+.ctTpl_seasons_tablet .ctBasemapGallery .esriBasemapGalleryNode, 
+.ctTpl_seasons_tablet .ctBasemapGallery .esriBasemapGalleryThumbnail{
+    width: 90%;
+    height: auto;
+}
+
+.ctTpl_seasons_tablet .ctBasemapGallery .esriBasemapGalleryNode {
+    display: block;
+    float: left;
+}
+.ctTpl_seasons_tablet .scaleBar{
+    position: absolute;
+    bottom: 13px;
+    right: 150px;
+}
+
+.ctTpl_seasons_tablet .scaleBar * {
+    /*color of scalebar on map is theme independant*/
+    text-shadow: 1px 1px 1px #FFF;
+    font-weight: bold;
+    color: #616161!important;  
+    border-color: #616161!important;
+}
+.ctTpl_seasons_tablet .coordinateInfo{
+    position: absolute;
+    left: 0px;
+    bottom: 25px;
+}
+.ctTpl_seasons_tablet .buttonBasemapToggler{
+    position: absolute;
+    bottom: 40px;
+    text-align: center;
+    left: 20px
+}
+/*-------------------------
+    MapLoadingInfo  Classes
+-------------------------*/
+
+.ctTpl_seasons_tablet .mapLoadingInfo {
+    position: absolute;
+    left: 10px;
+    top: 80px;
+}
+@media screen and (max-width: 768px) {
+    .ctTpl_seasons_tablet .branding{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .ctTpl_seasons_tablet .searchbox .omnisearch{
+        width: 190px;
+    }
+    .ctTpl_seasons_tablet .coordinateInfo{
+        bottom: 55px;
+    }
+}

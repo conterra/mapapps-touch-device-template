@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- this is required to let ace editor work in IE 8 and 7 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="con terra GmbH, Muenster, Germany" />
+    <meta name="keywords" content="con terra, GIS, map, maps, karte, social, map.apps, android, rwd, responsive ,iPad, iPhone, smartphone, mobile, rest, json,tablet, RIA, application, osgi, esri " />
+    <meta name="description" content="map.apps - innovative apps for web & mobile" />
+    <meta name="robots" content="nofollow" />
+    <meta name="copyright" content="con terra GmbH" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+    <title>@@appTitle@@</title>
+    <link type="text/css" rel="stylesheet" href="@@applicationURL.noscheme@@/init.css" />
+    <link type="text/css" rel="stylesheet" href="splash.css" />
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-ico-precomposedn" href="@@applicationURL.noscheme@@/images/mobile/home-icon-57x57.png" />
+    <!-- For first-generation iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="@@applicationURL.noscheme@@/images/mobile/home-icon-57x57.png" />
+    <!-- For iPhone 4 with high-resolution Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="@@applicationURL.noscheme@@/images/mobile/home-icon-114x114.png" />
+    <!-- IOS Startup Image -->
+    <link rel="apple-touch-startup-image" href="@@applicationURL.noscheme@@/images/mobile/splash-screen.png" />
+    <!-- Chrome Mobile Browser -->
+    <link rel="shortcut icon" sizes="196x196" href="@@applicationURL.noscheme@@/images/mobile/home-icon-196x196.png">
+    <link rel="shortcut icon" sizes="114x114" href="@@applicationURL.noscheme@@/images/mobile/home-icon-114x114.png" />
+    <link rel="icon" type="image/x-icon" href="@@applicationURL.noscheme@@/favicon.ico" />
+    <script type="text/javascript" src="@@client.config.initjs@@" charset="utf-8"></script>
+    <script type="text/javascript">
+        $apprt.changeConfig({
+            ct: {
+                amdPackages: "@@appAmdPackages@@",
+                mainLayerFiles: "@@appMainLayerFiles@@",
+                oauthEnabled: "@@appOauthEnabled@@",
+                oauthAppId: "@@appOauthAppId@@",
+                oauthUsePopup: "@@appOauthUsePopup@@",
+                arcgisPortalUrl: "@@appArcgisPortalUrl@@"
+            }
+        });
+        $apprt.load(function(Launcher) {
+            new Launcher({
+                configLocation: "builderapps"
+            }).launchApp("@@appId@@");
+        });
+    </script>
+</head>
+
+<body class="start">
+    <div class="startLogo"></div>
+    <div id="splashScreen" class="splashScreen">
+        <div class="anim_bg">
+            <div class="progress"></div>
+            <div class="tablet"></div>
+        </div>
+
+        <div class="progressMsg">
+            <p class="splashHeader launchLog">Start</p>
+            <p class="splashBundle">&nbsp;</p>
+            <div class="splashSpacer"></div>
+        </div>
+    </div>
+</body>
+
+</html>

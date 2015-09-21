@@ -1,0 +1,66 @@
+<div class="fullwidthAndHeight" >
+    <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="gutters:false,design:'sidebar','class':'fullwidthAndHeight'" >
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'right','class':'sidebar noPadding'">
+            <div class="addThis" data-dojo-attach-point="addThis"></div>
+            <div class="actionBarRight" data-dojo-attach-point="toolset_actionbar_right"></div>
+        </div>
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center','class':'mainMap noPadding'">
+            <div data-dojo-type="ct/ui/template/OverlayContainer" data-dojo-attach-point="mapOverlayWidgetContainer" data-dojo-props="'class':'mapOverlayWidgetContainer'" style="position:relative">
+                <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="map" data-dojo-props="'class':'noPadding'"></div>
+                <div class="mainMapControls">
+                    <div class="top_left_container">
+                        <div class="searchbox">
+                            <div class="searchActionBar" data-dojo-attach-point="toolset_search_tools"></div>
+                            <div class="omnisearch" data-dojo-attach-point="omniSearchMobile"></div>
+                        </div>
+                        <div class="mobile_toolwriter" data-dojo-attach-point="mobile_toolwriter"></div>
+                    </div>
+                    <div class="mapLoadingInfo" data-dojo-attach-point="mapLoadingInfo"></div>
+                    <div class="bookmarksViewer" data-dojo-attach-point="bookmarksViewer"></div>
+                    <div class="toc" data-dojo-attach-point="toc"></div>
+                    <div class="coordinateInfo" data-dojo-attach-point="coordinateviewer"></div>
+                    <div class="scaleBar" data-dojo-attach-point="scaleBar"></div>
+                    <div class="buttonBasemapToggler" data-dojo-attach-point="buttonBasemapToggler"></div>
+                    <div class="branding" data-dojo-attach-point="logo"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Window Configurations-->
+    <!-- width 1/3 height 3/3-->
+    <!-- 
+        ,dockable:true,marginBox:{r:0,w:'33%',b:0,t:0},closable:true,minimizeOnClose:true,resizable:false,draggable:false,fixEdgesInViewPort:{l:false},autofocus:false, windowClass:'right_slideInOut'"
+    -->
+    <div data-dojo-attach-point="bookmarkstoolbar" class="dijitHidden" data-template-window="title:'${i18n.bookmarks.title}',dockTool:'bookmarkstool',dockable:true,marginBox:{r:0,w:'33%',b:0,t:0},closable:true,minimizeOnClose:true,resizable:false,draggable:false,fixEdgesInViewPort:{l:false},autofocus:false, windowClass:'right_slideInOut'"></div>
+    <div data-dojo-attach-point="mobileToc" class="dijitHidden" data-template-window="title:'${i18n.mobiletoc.title}',dockTool:'mobileTocToggleTool',dockable:true,marginBox:{r:0,w:'33%',b:0,t:0},closable:true,minimizeOnClose:true,resizable:false,draggable:false,fixEdgesInViewPort:{l:false},autofocus:false, windowClass:'right_slideInOut'"></div>
+    <div data-dojo-attach-point="legend" class="dijitHidden" data-template-window="title:'${i18n.legend.title}',dockable:true,dockTool:'legendToggleTool',marginBox:{w:'33%',t:0,r:0,b:0},closable:true,minimizeOnClose:true,draggable:false,fixEdgesInViewPort:{l:false},autofocus:false, windowClass:'right_slideInOut'"></div>
+    <div data-dojo-attach-point="overviewMap" class="dijitHidden" data-template-window="title:'${i18n.overviewmap.title}',dockable:true,dockTool:'overviewmap',marginBox:{w:'33%',t:0,r:0,b:0},closable:true,minimizeOnClose:true,draggable:false,fixEdgesInViewPort:{l:false},autofocus:false, windowClass:'right_slideInOut'"></div>
+    <div data-dojo-attach-point="parametrizedURL" class="dijitHidden" data-template-window="title:'${i18n.parameterURL.title}',dockTool:'urlEncoder',marginBox:{w:'33%',t:0,r:0,b:0},closable:true,minimizeOnClose:true,resizable:false,draggable:false,autofocus:false,windowClass:'right_slideInOut'" data-template-windowevents="onShow:'preSelectLink'"></div>
+    <div data-dojo-attach-point="followMe" class="dijitHidden" data-template-window="windowClass:'ctFollowMe',title:'${i18n.followme.title}',dockable:true,dockingBar:'${id}-dockingBarBottomLeft',dockTool:'followmeToggleTool',dockable:true,marginBox:{r:0,w:'33%',b:0,t:0},closable:true,minimizeOnClose:true,resizable:false,draggable:false,fixEdgesInViewPort:{l:false},autofocus:false, windowClass:'right_slideInOut'"></div>
+    <div data-dojo-attach-point="printDialogAGSPrinting" class="dijitHidden" data-template-window="title:'${i18n.agsPringing.title}',dockTool:'agsprinttool',dockable:true,marginBox:{r:0,w:'33%',b:0,t:0},closable:true,minimizeOnClose:true,resizable:false,draggable:false,fixEdgesInViewPort:{l:false},autofocus:false, windowClass:'right_slideInOut'"></div>
+    <div data-dojo-attach-point="measurementtoolbar" class="dijitHidden" data-template-window="title:'${i18n.measurement.title}',dockTool:'measurementtool',dockable:true,marginBox:{r:0,w:'33%',b:0,t:0},closable:true,minimizeOnClose:true,resizable:false,draggable:false,fixEdgesInViewPort:{l:false},autofocus:false, windowClass:'ctToolPopup right_slideInOut'"></div>
+    <div data-dojo-attach-point="coordFinder" class="dijitHidden" data-template-window="title:'${i18n.coordfinder.title}',dockTool:'coordinateFinderTool',dockable:true,marginBox:{r:0,w:'33%',b:0,t:0},closable:true,minimizeOnClose:true,resizable:false,draggable:false,fixEdgesInViewPort:{l:false},autofocus:false, windowClass:'ctToolPopup right_slideInOut'"></div>
+    <div data-dojo-attach-point="storeListDataView" class="dijitHidden" data-template-window="title:'${i18n.storeSelectionDataView.title}',dockable:true,dockTool:'storeListDialogToggleTool',dockable:true,marginBox:{r:0,w:'33%',b:0,t:0},closable:true,minimizeOnClose:true,resizable:false,draggable:false,fixEdgesInViewPort:{l:false},autofocus:false, windowClass:'right_slideInOut'"></div>
+    <div data-dojo-attach-point="routing" class="dijitHidden" data-template-window="title:'${i18n.routing.title}',dockTool:'routingToggleTool',dockable:true,marginBox:{r:0,w:'33%',b:0,t:0},closable:true,minimizeOnClose:true,resizable:false,draggable:false,fixEdgesInViewPort:{l:false},autofocus:false, windowClass:'right_slideInOut'"></div>
+    <div data-dojo-attach-point="redliningStyleProperties" class="dijitHidden" data-template-window="dockTool:'stylePropertiesTool',dockable:true,marginBox:{r:0,w:'33%',b:0,t:0},closable:true,minimizeOnClose:true,resizable:false,draggable:false,fixEdgesInViewPort:{l:false},autofocus:false, windowClass:'right_slideInOut'"></div>
+    <div data-dojo-attach-point="editUI" class="dijitHidden" data-template-window="title:'${i18n.edit.title}',dockable:true,dockTool:'editUITool',marginBox:{r:0,w:'33%',b:0,t:0},closable:true,minimizeOnClose:true,resizable:false,draggable:false,fixEdgesInViewPort:{l:false},autofocus:false, windowClass:'right_slideInOut'"></div>
+
+    <div data-dojo-attach-point="basemapGallery" class="dijitHidden" data-template-window="title:'${i18n.gallery.title}',dockTool:'basemapgalleryToggleTool',dockable:true,marginBox:{r:0,w:'33%',b:0,t:0},closable:true,minimizeOnClose:true,resizable:false,draggable:false,fixEdgesInViewPort:{l:false},autofocus:false, windowClass:'right_slideInOut'"  data-template-windowevents="onShow:'load'"></div>
+
+
+    <!-- width 3/3, height 3/6-->
+    <!-- 
+        ,dockable:true,dockTool:'resultcenterToggleTool',marginBox:{l:0,h:'50%',r:60,b:0},closable:true,minimizeOnClose:true,resizable:false,draggable:false,fixEdgesInViewPort:{t:false},autofocus:false,tools:[]"
+    -->
+    <div data-dojo-attach-point="resultCenter" class="dijitHidden " data-template-window="windowClass:'bottom_slideInOut',title:'${i18n.resultcenter.title}',dockable:true,dockTool:'resultcenterToggleTool',marginBox:{l:0,h:'50%',r:60,b:0},closable:true,minimizeOnClose:true,resizable:false,draggable:false,fixEdgesInViewPort:{t:false},autofocus:false,tools:[]"></div>
+
+    <!-- width 3/3, height 3/3-->
+    <!-- 
+        ,dockable:true,marginBox:{w:'100%',h:'100%'},closable:true,minimizeOnClose:true,resizable:false,draggable:false,autofocus:false, windowClass:'top_slideInOut fullscreen'"
+    -->
+    <div data-dojo-attach-point="appsOverview" class="dijitHidden" data-template-window="dockTool:'appsOverviewToggleTool',dockable:true,marginBox:{w:'100%',h:'100%'},closable:true,minimizeOnClose:true,resizable:false,draggable:false,autofocus:false, windowClass:'top_slideInOut fullscreen'"></div>
+
+
+</div>

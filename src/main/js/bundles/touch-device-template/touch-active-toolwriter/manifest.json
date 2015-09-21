@@ -1,0 +1,24 @@
+{
+    "Bundle-SymbolicName": "touch-active-toolwriter",
+    "Bundle-Version": "1.0.0",
+    "Bundle-Name": "${bundleName}",
+    "Bundle-Description": "${bundleDescription}",
+    "Bundle-StartLevel": 1,
+    "Product-Name": "map.apps Developer Network",
+    "Components": [{
+            "name": "ToolWriterWidgetFactory",
+            "provides": ["dijit.Widget", "ct.framework.api.EventHandler"],
+            "instanceFactory": true,
+            "properties": {
+                "widgetRole": "mobile_toolwriter",
+                "Event-Topics": [{
+                        "topic": "ct/tool/ACTIVATE/*",
+                        "method": "_onHandleToolActivate"
+                    },
+                    {
+                        "topic": "ct/tool/DEACTIVATE/*",
+                        "method": "_onHandleToolDeactivate"
+                    }]
+            }
+        }]
+}

@@ -1,0 +1,10 @@
+{
+    "Bundle-SymbolicName": "touch-i18n",
+    "Bundle-Version": "1.0.0",
+    "Bundle-StartLevel": 1,
+    "Bundle-Localization": [],
+    "Bundle-Main": "",
+    "Bundle-Layer": "",
+    "i18n-extension": ["bundle"],
+    "Product-Name": "map.apps Developer Network"
+}

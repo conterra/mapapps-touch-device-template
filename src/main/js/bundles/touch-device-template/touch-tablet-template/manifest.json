@@ -1,0 +1,9 @@
+{
+    "Bundle-SymbolicName": "touch-tablet-template",
+    "Bundle-Version": "1.0.0",
+    "Bundle-Localization": [],
+    "Bundle-Main": "",
+    "Bundle-Layer": "",
+    "layout-widgets": [],
+    "Product-Name": "map.apps Developer Network"
+}

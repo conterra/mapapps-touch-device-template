@@ -1,0 +1,334 @@
+/**
+ * Copyright (C) 2015 con terra GmbH (info@conterra.de)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *         http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15.06.2015, 10:09:31
+    Author     : juku
+*/
+.ctAppRoot.everlasting{
+    font-size: 1.2em;
+}
+
+.ctAppRoot input,
+.ctAppRoot textarea,
+.ctAppRoot option,
+.ctAppRoot select,
+.ctAppRoot button,
+.ctAppRoot textarea {
+    font-family: Lato, sans-serif;
+    font-size: 1.2em;
+}
+
+.ctAppRoot .dijitCheckBox, 
+.ctAppRoot .dijitRadio, 
+.ctAppRoot .dijitCheckBoxInput{
+    width: 1.5em;
+    height: 1.5em;
+} 
+
+.ctAppRoot .dijitRadio:before,
+.ctAppRoot .dijitCheckBox:before{
+    font-size: 1.5em;
+} 
+
+.dijitPlaceHolder{
+    top: 3px;
+    left: 3px;
+}
+
+.ctAppRoot .dijitMenuPopup{
+    overflow: hidden;
+}
+.ctAppRoot .dijitMenuItem{
+    font-size: 1.2em;
+}
+.ctAppRoot .dijitMenu td.dijitMenuItemLabel{
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+.ctAppRoot .dijitMenu td.dijitMenuItemIconCell{
+    padding-left: .5em;
+    padding-right: .3em;
+}
+.ctAppRoot .dijitMenu .dijitMenuItem .dijitIcon{
+    font-size: 1.2em;
+}
+.ctAppRoot .dijitComboBox .dijitArrowButton {
+    position: static; 
+    font-size: inherit; 
+}
+.ctAppRoot .dijitSpinner .dijitSpinnerButtonInner{
+    width: 1.5em;
+}
+.ctAppRoot .dijitSpinnerButtonContainer .dijitArrowButton {
+    width: 100%;
+}
+.ctAppRoot .dijitSpinner .dijitUpArrowButtonActive .dijitArrowButtonInner,
+.ctAppRoot .dijitSpinner .dijitDownArrowButtonActive .dijitArrowButtonInner{
+    margin: 0 auto;
+}
+.ctDropDownColorSelector .dijitArrowButtonInner{
+    vertical-align: top;
+}
+/*windowBase*/
+.ctAppRoot .ctWindow .dijitDialogTitleBar {
+    padding: 8px 12px;
+}
+.ctAppRoot .ctWindow .dijitDialogTitle{
+    margin-right: 4.8em;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/*Widget Specific increasements*/
+.ctAppRoot .ctShrinkingDropDown .dijitButtonNode{
+    font-size: inherit;
+}
+.ctAppRoot .ctDrawer{
+    font-size: inherit;
+}
+/*dGrid*/
+.ctAppRoot .dgrid{
+    font-size: .7em;
+}
+.ctAppRoot .dgrid-cell-padding{
+    padding: 8px 4px;
+}
+/*MobileToc*/
+.ctAppRoot .ctMobileToc .child .title{
+    font-size: .9em;
+}
+/*FollowMe*/
+.ctAppRoot .followMeHint{
+    font-size: .9em;
+    font-weight: normal;
+    margin: .5em 0 .7em;
+}
+.ctAppRoot .ctFollowMeInputGroup .dijitTextBox{
+    width: auto;
+    display: block;
+}
+.ctAppRoot .ctFollowMeInputGroup {
+    margin-bottom: 16px;
+}
+.ctAppRoot .ctFollowMeInputGroup .dijitButton{
+    margin: 1em 0;
+    display: block;
+}
+.ctAppRoot .ctFollowMeInputGroup .dijitButtonNode{
+    display: block;
+    padding: 10px;
+}
+.ctAppRoot .ctFollowMe  .col1 {
+    float: none;
+    width: auto;
+}
+.ctAppRoot .ctFollowMeSessionActive,
+.ctAppRoot .ctFollowMeSessionTimestamp,
+.ctAppRoot .ctFollowMeAttendeesList {
+    font-size: inherit
+}
+.ctAppRoot .ctFollowMeAttendees {
+    margin-left: 0;
+    border-left: none;
+}
+.ctAppRoot .ctFollowMeAttendeesList ul li{
+    width: auto;
+}
+
+/*AGS Printing*/
+.ctAppRoot .ctPrintDialog .form-row{
+    margin: 5px 0;
+}
+.ctAppRoot .ctPrintDialog  .dijitButton{
+    display: block;
+    margin: 1em 0 0;
+}
+.ctAppRoot .ctPrintDialog  .dijitButton .dijitButtonNode{
+    display: block;
+    padding: 10px;
+}
+
+/*ParameterManager*/
+.ctAppRoot .ctParameterWindow{
+    height: auto;
+}
+.ctAppRoot .ctParameterWindow h3{
+    font-size: .9em;
+}
+.ctAppRoot .ctParameterWindow img{
+    width: 100%;
+    height: auto;
+}
+.ctAppRoot .ctParameterWindow .ctParameterSizeBox {
+    width: 4em;
+}
+
+/*Measurement*/
+.ctAppRoot .ctMeasurement .dijitContentPane{
+    padding: 0;
+}
+.ctAppRoot .ctMeasurement .ctParameterSizeBox {
+    width: 4em;
+}
+.ctAppRoot .ctMeasurement .dijitDropDownButton{
+    display: block;
+    margin: 1em 0;
+}
+.ctAppRoot .ctMeasurement .dijitDropDownButton .dijitButtonNode{
+    display: block;
+    padding: 10px;
+}
+.ctAppRoot .ctMeasurement .esriMeasurementTableContainer {
+    width: auto;
+}
+.ctAppRoot .ctMeasurement .esriMeasurementResultValue{
+    text-align: center
+}
+
+/*CoordinateFinder*/
+.ctAppRoot .ctCoordFinder{
+    width: auto;
+}
+.ctAppRoot .ctCoordFinder .coordInput,
+.ctAppRoot .ctCoordFinder .epsgSelect{
+    margin: 8px 0;
+}
+
+.ctAppRoot .ctCoordFinder .dijitButton{
+    display: block;
+    margin: 1em 0;
+}
+.ctAppRoot .ctCoordFinder .dijitButton .dijitButtonNode{
+    display: block;
+    padding: 10px;
+}
+/*Bookmarks*/
+.ctAppRoot .ctPredefinedBookmarks,
+.ctAppRoot .ctCustomBookmarks{
+    width: auto;
+}
+.ctAppRoot .ctBookmarks .esriBookmarkItem {
+    padding: 12px 0;
+}
+.ctAppRoot .ctBookmarks .esriBookmarkLabel{
+    font-size: inherit;
+}
+.ctAppRoot .ctBookmarks .esriBookmarkItem.esriAddBookmark{
+    padding: 10px;  
+    margin: 1em 0;  
+}
+.ctAppRoot .ctBookmarks .esriBookmarkRemoveImage{
+    margin-left: 20px;
+}
+.ctAppRoot .bookmarkstoolbar .dijitDialogPaneContent,
+.ctAppRoot .bookmarkstoolbar .dijitContentPane{
+    overflow-x: hidden;
+}
+
+/*Legend*/
+.ctAppRoot .ctLegend .esriLegendServiceLabel,
+.ctAppRoot .ctLegend .esriLegendLayerLabel{
+    font-size: inherit
+}
+.ctAppRoot .ctLegend .esriLegendLayer td{
+    font-size: .9em
+}
+
+/*Routing*/
+.ctAppRoot .simpleDirections .esriStopsGetDirections{
+    font-size: 1em;
+}
+.ctAppRoot .simpleDirections .esriTravelModesContainer{
+    /*esri sets 'font-size:0' on parent element. so we can't work with em here.*/
+    margin: 30px 10px;
+}
+.ctAppRoot .ctRouting .esriDirectionsTabButton{
+    /*esri sets 'font-size:0' on parent element. so we can't work with em here.*/
+    font-size: 16px;  
+    line-height: 26px;
+}
+.ctAppRoot .simpleDirections .esriLinkButton{
+    font-size: .7em;
+}
+/*dataView*/
+.ctAppRoot .dijitContentPane.ctDataViewToolBar{
+    padding: 8px 0;
+    font-size: small;
+}
+
+/*ResultCenter*/
+.ctAppRoot .resultCenter .toolbar .ctTool,
+.ctAppRoot .resultCenter .ctToggleButtonGroup .dijitToggleButton .dijitIcon{
+    margin: 0 .5em;
+}
+.ctAppRoot .resultCenter .toolbar .dijitButtonNode,
+.ctAppRoot .resultCenter .ctToggleButtonGroup .dijitToggleButton .dijitIcon{
+    font-size: 1.5em;
+    padding: .2em
+}
+.ctAppRoot .resultCenter .toolbar .dijitButton .dijitIcon:before{
+    position: static
+}
+.ctAppRoot .resultCenter .ctToggleButtonGroup .dijitToggleButton .dijitIcon{
+    width: 1.5em;
+    height: 1.5em;
+}
+
+/*DataForm*/
+.ctAppRoot .ctDataForm .ctFormControl.borderpanel .slider.ctFormControl{
+    /*reset to map.apps base default font-size as the borderpanel around the slider
+    does not allow a size dependant from a widget inside of it*/
+    font-size: 11px;
+}
+/*InfoViewer*/
+.ctAppRoot .ctInfoPopupWindow,
+.ctAppRoot .esriPopup{
+    font-size: inherit;
+}
+
+/*OmniSearch*/
+.ctAppRoot .ctOmniSearchSettings .ctStore {
+    margin: 1em 0;
+}
+
+/*Map*/
+.ctAppRoot .ctMapLoadingInfo{
+    font-size: 1.2em;
+}
+
+/*Editing*/
+.ctAppRoot .ctFeatureTemplateChooser .dgrid{
+    font-size: 1em;
+}
+/*CoordinateViewer*/
+.ctAppRoot .ctCoordinateViewer{
+    font-size: .7em;
+}
+
+/*Wizard*/
+/*resetting back to normal*/
+.ctAppRoot .ctLoadConfigBundlesBlocker,
+.ctAppRoot .appbuilder.ctBuilderWindowRoot .dgrid{
+    font-size: 12px;
+}
+.ctAppRoot .appbuilder.ctBuilderWindowRoot{
+    font-size: 11px;
+}

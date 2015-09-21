@@ -1,0 +1,53 @@
+{
+    "Bundle-SymbolicName": "mobile-logo-config",
+    "Bundle-Name": "${bundleName}",
+    "Bundle-Description": "${bundleName}",
+    "Bundle-Version": "1.0.0",
+    "Bundle-Vendor": "con terra GmbH",
+    "Require-Bundle": [{
+            "name": "dataform",
+            "version": "~3.2.0"
+        }, {
+            "name": "wizard",
+            "version": "~3.2.0"
+        }],
+    "Components": [{
+            "name": "BuilderEntry",
+            "impl": "ct/Stateful",
+            "provides": ["wizard.MenuEntry"],
+            "propertiesConstructor": true,
+            "properties": {
+                "parentNodeId": "appBuilderDesignNode",
+                "menuNode": {
+                    "title": "${title}",
+                    "priority": -1,
+                    "widget": "logoBuilderWidget",
+                    "iconUrl": "resource('styles/images/icon.png')"
+                }
+            }
+        },
+        {
+            "name": "DataFormBuilderWidgetFactory",
+            "impl": "wizard/DataFormBuilderWidgetFactory",
+            "provides": ["dijit.wizard.Widget"],
+            "immediate": true,
+            "instanceFactory": true,
+            "properties": {
+                "dataformFile": "resource('./DataForm.json')",
+                "bid": "mobile-logo",
+                "pid": "mobile-logo-Logo",
+                "id": "logoBuilderWidget",
+                "defaultProperties": {
+                    "src": ""
+                },
+                "description": "${hint}"
+            },
+            "references": [{
+                    "name": "_configAdminService",
+                    "providing": "ct.framework.api.ConfigurationAdmin"
+                }, {
+                    "name": "_dataformService",
+                    "providing": "dataform.DataFormService"
+                }]
+        }]
+}
