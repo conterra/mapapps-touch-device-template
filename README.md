@@ -6,4 +6,4 @@ The download contains the app-template itself as well as additional required bun
 This app-template requires map.apps 3.2. It has been tested on an iPad and a Samsung Galaxy Tab 4.
 
 ### Sample App ###
-http://mapapps.de/mapapps/resources/apps/touch-device-app/index.html
+http://www.mapapps.de/mapapps/resources/apps/touch-device-app/index.html
