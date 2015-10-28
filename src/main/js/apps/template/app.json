@@ -5,8 +5,8 @@
             "bundles"
         ],
         "allowedBundles": [
-            "mobileview", "system", "templatelayout", "toolset", "map", "notifier", "contentviewer",
-            "touch-active-toolwriter", "touch-themes-extension", "touch-tablet-template", "touch-i18n", "touch-logo", "touch-featureinfo-patch"
+            "mobileview", "system", "templatelayout", "toolset", "map", "notifier", "contentviewer", "banner",
+            "touch-active-toolwriter", "touch-themes-extension", "touch-tablet-template", "touch-i18n","touch-featureinfo-patch"
         ],
         "require": ["${app}.app"],
         "i18n": ["bundle"],
@@ -259,7 +259,6 @@
                             "zoomToPrevExtentTool",
                             "zoomToFullExtentTool"
                         ],
-                        "container": "map",
                         "container": "ignore",
                         "registerTool": true,
                         "iconClass": "icon-zoom-world",

@@ -9,11 +9,11 @@
         ],
         "allowedBundles": [
             "console", "custominfo", "filesaver", "mobileview", "parametermanager", "qrcode", "remotechannels", "splashscreen", "system", "templatelayout", "toolset",
-            "basemapgallery", "followme", "map", "webmap",
+            "basemapgallery", "followme", "map", "webmap", "banner",
             "agsprinting", "bookmarks", "coordinatefinder", "legend", "locateme", "measurement", "navigationtoolset", "overviewmap", "redlining", "undoredo",
             "reportstore", "reporttool", "agssearch", "geonames", "locator", "omnisearch",
             "featureinfo", "infoservice", "resultcenter", "selection", "mobiletoc", "notifier", "routing",
-            "touch-active-toolwriter", "touch-themes-extension", "touch-tablet-template", "touch-i18n", "touch-logo", "touch-featureinfo-patch"
+            "touch-i18n", "touch-themes-extension", "touch-tablet-template", "touch-featureinfo-patch","touch-active-toolwriter"
         ],
         "require": ["${app}.app"],
         "i18n": ["bundle"],
@@ -23,6 +23,15 @@
         "agssearch": {
             "AutoStoreRegistration": {
                 "componentEnabled": true
+            }
+        },
+        "banner": {
+            "BannerWidget": {               
+                "image": "http://www.mapapps.de/static/conterra.png",
+                "imageWidth": 150,
+                "imagePosition": "above",
+                "link": "http://www.conterra.de",
+                "enableBackground": true
             }
         },
         "basemapgallery": {
@@ -483,11 +492,6 @@
                 }
             }
         },
-        "touch-logo": {
-            "Logo": {
-                "src": "http://www.mapapps.de/static/conterra.png"
-            }
-        },
         "omnisearch": {
             "OmniSearchFactory": {
                 "comboBoxOpts": {
@@ -820,7 +824,6 @@
                             "zoomToPrevExtentTool",
                             "zoomToFullExtentTool"
                         ],
-                        "container": "map",
                         "container": "ignore",
                         "registerTool": true,
                         "iconClass": "icon-zoom-world",

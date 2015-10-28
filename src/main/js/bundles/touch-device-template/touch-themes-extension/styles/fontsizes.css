@@ -313,7 +313,13 @@ and open the template in the editor.
 .ctAppRoot .ctMapLoadingInfo{
     font-size: 1.2em;
 }
-
+/*Banner*/
+.ctAppRoot .ctBanner{
+    font-size: 0;
+}
+.ctAppRoot .ctBanner span{
+    font-size: 13px;
+}
 /*Editing*/
 .ctAppRoot .ctFeatureTemplateChooser .dgrid{
     font-size: 1em;

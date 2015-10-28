@@ -28,7 +28,7 @@
         }
     </style>
     <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-    <link rel="apple-touch-ico-precomposedn" href="@@applicationURL.noscheme@@/images/mobile/home-icon-57x57.png" />
+    <link rel="apple-touch-ico-precomposed" href="@@applicationURL.noscheme@@/images/mobile/home-icon-57x57.png" />
     <!-- For first-generation iPad: -->
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="@@applicationURL.noscheme@@/images/mobile/home-icon-57x57.png" />
     <!-- For iPhone 4 with high-resolution Retina display: -->
@@ -62,16 +62,13 @@
 <body class="start">
     <div class="startLogo"></div>
     <div id="splashScreen" class="splashScreen">
-        <div class="anim_bg">
-            <div class="progress"></div>
-            <div class="tablet"></div>
+        <div class="folding-map folding-map-rotated">
+            <div class="map-tile map-tile-1"></div>
+            <div class="map-tile map-tile-2"></div>
+            <div class="map-tile map-tile-4"></div>
+            <div class="map-tile map-tile-3"></div>
         </div>
-
-        <div class="progressMsg">
-            <p class="splashHeader launchLog">Start</p>
-            <p class="splashBundle">&nbsp;</p>
-            <div class="splashSpacer"></div>
-        </div>
+        <p class="splashHeader launchLog">...</p>
     </div>
 </body>
 

@@ -1,11 +1,11 @@
 {
     "Bundle-SymbolicName": "touch-featureinfo-patch",
     "Bundle-Description": "This patch is required since feature info has problems if only full-screen contentviewers are used",
-    "Bundle-Version": "1.0.0",
+    "Bundle-Version": "1.1.0",
     "Product-Name": "map.apps Developer Network",
     "Require-Bundle": [{
             "name": "featureinfo",
-            "version": "~3.2.0"
+            "version": "^3.3.0"
         }],
     "Components": [{
             "name": "FeatureInfoPatcher"

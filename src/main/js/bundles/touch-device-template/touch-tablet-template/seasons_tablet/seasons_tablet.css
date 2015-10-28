@@ -72,7 +72,7 @@
     margin-top: 10px;
     margin-left: -5px;
 }
-.ctTpl_seasons_tablet .branding{
+.ctTpl_seasons_tablet .bannerPlaceHolder{
     position: absolute;
     top: 20px;
     right: 20px;
@@ -193,7 +193,7 @@
     top: 80px;
 }
 @media screen and (max-width: 768px) {
-    .ctTpl_seasons_tablet .branding{
+    .ctTpl_seasons_tablet .ctBanner{
         display: none;
     }
 }

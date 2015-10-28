@@ -1,10 +1,15 @@
 {
     "Bundle-SymbolicName": "touch-active-toolwriter",
-    "Bundle-Version": "1.0.0",
+    "Bundle-Version": "1.1.0",
     "Bundle-Name": "${bundleName}",
     "Bundle-Description": "${bundleDescription}",
     "Bundle-StartLevel": 1,
     "Product-Name": "map.apps Developer Network",
+    "Require-Bundle":[
+        {
+            "name": "touch-i18n"
+        }
+    ],
     "Components": [{
             "name": "ToolWriterWidgetFactory",
             "provides": ["dijit.Widget", "ct.framework.api.EventHandler"],
