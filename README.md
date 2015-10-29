@@ -5,3 +5,5 @@ The download contains the app-template itself as well as additional required bun
 
 ### Sample App ###
 http://www.mapapps.de/mapapps/resources/apps/touch-device-app/index.html
+
+[We highly appreciate your feedback](http://developernetwork.conterra.de/de/forum/feedback-zu-touch-device-template)
