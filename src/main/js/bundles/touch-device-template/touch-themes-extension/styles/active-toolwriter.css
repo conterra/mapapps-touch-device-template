@@ -48,3 +48,8 @@
 .ctAppRoot .ctActiveToolWriter .toolListNode a:first-child{
     margin-right: .3em;
 } 
+
+/*TODO: remove after map.apps > 3.5.0*/
+.ctAppRoot .color-highlight{
+    color: #12a5f4;
+}
