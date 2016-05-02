@@ -68,9 +68,9 @@ define(["dojo/_base/declare", "dijit/_WidgetBase", "ct/util/css", "dijit/_Templa
                     var id = tool.get("id");
                     var title = tool.get("title") || id;
                     var iconClass = tool.get("iconClass");
-                    var liNode = domConstruct.create("li", {'class': id}, this._toolsNode);
-                    domConstruct.create("a", {"class": iconClass}, liNode);
-                    domConstruct.create("a", {innerHTML: title}, liNode);
+                    var liNode = domConstruct.create("li", {'class': id + ' color-highlight'}, this._toolsNode);
+                    domConstruct.create("span", {"class": iconClass}, liNode);
+                    domConstruct.create("span", {innerHTML: title}, liNode);
                 },
                 _onHandleToolDeactivate: function(event) {
                     var tool = event.getProperty("tool");

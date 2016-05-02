@@ -2,7 +2,7 @@
     "Bundle-SymbolicName": "touch-themes-extension",
     "Bundle-Name": "map.apps mobile: Mobile Theme Extension Bundle",
     "Bundle-Description": "Bundle provides additional styling to improve usability on touch devices",
-    "Bundle-Version": "1.1.0",
+    "Bundle-Version": "1.2.0",
     "Bundle-Layer": "",
     "Bundle-Main": "",
     "Bundle-Localization": [],
