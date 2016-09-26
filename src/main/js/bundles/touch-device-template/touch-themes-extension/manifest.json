@@ -8,6 +8,7 @@
     "Bundle-Localization": [],
     "Bundle-Vendor": "con terra GmbH",
     "Bundle-Category": ["mobile", "themes"],
+    "Product-Name": "devnet-mapapps-touch-device-template",
     "Require-Bundle": [{
             "name": "themes",
             "version": "^3.3.0"
@@ -30,6 +31,5 @@
         {
             "name": "autumn",
             "files": ["./styles/style.css"]
-        }],
-    "Product-Name": "con terra Developer Network"
+        }]
 }
