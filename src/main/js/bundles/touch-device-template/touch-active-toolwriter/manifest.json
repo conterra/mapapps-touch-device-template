@@ -4,7 +4,7 @@
     "Bundle-Name": "${bundleName}",
     "Bundle-Description": "${bundleDescription}",
     "Bundle-StartLevel": 1,
-    "Product-Name": "con terra Developer Network",
+    "Product-Name": "devnet-mapapps-touch-device-template",
     "Require-Bundle":[
         {
             "name": "touch-i18n"
