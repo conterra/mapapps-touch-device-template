@@ -7,4 +7,6 @@ Sample App
 ------------------
 http://www.mapapps.de/mapapps/resources/apps/touch-device-app/index.html
 
+![Screenshotz](https://github.com/conterra/mapapps-touch-device-template/blob/master/tablet.JPG)
+
 [We highly appreciate your feedback](http://developernetwork.conterra.de/de/forum/feedback-zu-touch-device-template)
